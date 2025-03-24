@@ -182,7 +182,7 @@ footer {
 /* --- Responsivo --- */
 @media (max-width: 768px) {
     .imagenes img {
-        width: 80%;
+        width: 85%;
     }
 }
 
