@@ -1,5 +1,26 @@
-document.querySelector(".menu-toggle").addEventListener("click", function() {
-    document.querySelector(".menu ul").classList.toggle("show");
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu ul");
+    const menuLinks = document.querySelectorAll(".menu a"); // Selecciona todos los enlaces del menú
+
+    // Abre o cierra el menú al hacer clic en el botón
+    menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("show");
+    });
+
+    // Cierra el menú cuando se hace clic fuera de él
+    document.addEventListener("click", function(event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+            menu.classList.remove("show");
+        }
+    });
+
+    // Cierra el menú al hacer clic en un enlace
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            menu.classList.remove("show");
+        });
+    });
 });
 
 
@@ -22,4 +43,5 @@ document.querySelector("#formulario-contacto").addEventListener("submit", functi
 
     window.open(whatsappURL, "_blank");
 });
+
 
