@@ -44,20 +44,37 @@ header {
 
 .hero {
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     background-color: #F39C12;
     color: white;
 }
 
 h1 {
+    text-align: left;
+    margin: 20px;
     font-size: 36px;
+    color: white;
 }
 
-.servicio, .imagenes img {
+h2 {
+    padding: 15px;
+}
+
+.servicio {
     text-align: center;
     background: #D35400;
     color: white;
-    padding: 20px;
+    padding: 30px;
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.imagenes img {
+    text-align: center;
+    background: #D35400;
+    color: white;
+    padding: 10px;
     margin: 10px auto;
     border-radius: 10px;
     width: 80%;
@@ -95,6 +112,7 @@ button {
     padding: 10px;
     border: none;
     cursor: pointer;
+    margin: 10px;
 }
 
 footer {
@@ -136,9 +154,9 @@ footer {
     top: 100px;
     right: 0;
     left: 0;
-    width: 400px;
+    width: 100%;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     
 }
@@ -199,4 +217,18 @@ footer {
     opacity: 0.8;
 }
 
+.menu-toggle {
+    position: fixed; /* Fijarlo en la pantalla */
+    top: 0px;       /* Separarlo del borde superior */
+    right: 0px;     /* Alinear a la derecha */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
 
+p {
+    padding: 10px;
+}
