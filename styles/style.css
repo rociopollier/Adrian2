@@ -17,6 +17,7 @@ header {
 .logo img {
     width: 110px;
     border-radius: 10px;
+    
 }
 
 .menu-toggle {
@@ -52,13 +53,13 @@ header {
 
 h1 {
     text-align: left;
-    margin: 15px;
+    margin: 13px;
     font-size: 36px;
     color: white;
 }
 
 h2 {
-    padding: 10px;
+    padding: 15px;
 }
 
 .servicio {
