@@ -1,3 +1,4 @@
+/* --- Estilo General --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,18 @@ body {
     color: #333;
 }
 
+h1 {
+    text-align: left;
+    margin: 13px;
+    font-size: 36px;
+    color: white;
+}
+
+h2, p {
+    padding: 15px;
+}
+
+/* --- Header y Menú --- */
 header {
     background-color: #E67E22;
     display: flex;
@@ -17,25 +30,47 @@ header {
 .logo img {
     width: 110px;
     border-radius: 10px;
-    
 }
 
 .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
     background: none;
     border: none;
-    font-size: 24px;
+    color: white;
     cursor: pointer;
-    display: none;
+    z-index: 1001;
 }
 
+/* --- Menú Desplegable --- */
 .menu ul {
     list-style: none;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(230, 126, 34, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    margin: 0;
     padding: 0;
+}
+
+.menu ul.show {
     display: flex;
 }
 
 .menu ul li {
-    margin: 0 15px;
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
 }
 
 .menu a {
@@ -44,6 +79,7 @@ header {
     font-weight: bold;
 }
 
+/* --- Hero Section --- */
 .hero {
     text-align: center;
     padding: 10px;
@@ -51,32 +87,12 @@ header {
     color: white;
 }
 
-h1 {
-    text-align: left;
-    margin: 13px;
-    font-size: 36px;
-    color: white;
-}
-
-h2 {
-    padding: 15px;
-}
-
+/* --- Servicios e Imágenes --- */
 .servicio {
     text-align: center;
     background: #D35400;
     color: white;
     padding: 30px;
-    margin: 10px auto;
-    border-radius: 10px;
-    width: 80%;
-}
-
-.imagenes img {
-    text-align: center;
-    background: #D35400;
-    color: white;
-    padding: 10px;
     margin: 10px auto;
     border-radius: 10px;
     width: 80%;
@@ -89,14 +105,22 @@ h2 {
 }
 
 .imagenes img {
-    width: 30%;
-    margin: 10px;
+    
+    
+    
+    text-align: center;
+    background: #D35400;
+    color: white;
+    padding: 10px;
+    margin: 10px auto;
     border-radius: 10px;
+    width: 80%;
 }
 
+/* --- Formulario --- */
 form {
     max-width: 400px;
-    margin: auto;
+    margin: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -117,70 +141,7 @@ button {
     margin: 10px;
 }
 
-footer {
-    background-color: #E67E22;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-@media (max-width: 768px) {
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        background: #E67E22;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-    }
-
-    .menu ul li {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .imagenes img {
-        width: 80%;
-    }
-}
-
-.menu ul {
-    display: none;
-    flex-direction: column;
-    background: #E67E22;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    left: 0;
-    width: 100%;
-    padding: 0;
-    border-radius: 0px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    
-}
-
-.menu ul.show {
-    display: flex;
-}
-
-.menu ul li {
-    text-align: center;
-    padding: 10px;
-}
-
-.menu-toggle {
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
+/* --- Footer --- */
 footer {
     background-color: #E67E22;
     color: white;
@@ -199,7 +160,6 @@ footer {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
-    
 }
 
 .footer-redes a {
@@ -208,7 +168,6 @@ footer {
 }
 
 .footer-redes img {
-    
     width: 50px;
     height: 50px;
 }
@@ -219,18 +178,10 @@ footer {
     opacity: 0.8;
 }
 
-.menu-toggle {
-    position: fixed; /* Fijarlo en la pantalla */
-    top: 0px;       /* Separarlo del borde superior */
-    right: 0px;     /* Alinear a la derecha */
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1001;
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+    .imagenes img {
+        width: 80%;
+    }
 }
 
-p {
-    padding: 10px;
-}
